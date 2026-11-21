@@ -11,14 +11,19 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4h2c.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></symbol>
+    <symbol id="i-comment" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3C6.5 3 2 6.9 2 11.6c0 2.4 1.2 4.6 3.1 6.1L4 21.5l4.4-2.1c1.1.3 2.3.5 3.6.5 5.5 0 10-3.9 10-8.6S17.5 3 12 3z"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path fill="currentColor" d="M14 4l8 7.5-8 7.5v-4.5c-5.5 0-9 1.6-12 5.5 1-5.5 4-10.5 12-11.5V4z"/></symbol>
+  </svg>
 
   <header class="nav" id="top">
     <div class="container nav__inner">
       <a href="#top" class="logo">Swiss Clips</a>
       <nav class="nav__links" aria-label="Main">
+        <a href="#how">How it works</a>
         <a href="#problem">Why short-form</a>
         <a href="#approach">Approach</a>
-        <a href="#process">Process</a>
         <a href="#faq">FAQ</a>
       </nav>
       <a href="#contact" class="btn btn--small">Book a call</a>
@@ -29,15 +34,82 @@
   <main>
     <!-- HERO -->
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Short-form content agency</p>
-        <h1>Turn the content you already have into attention you can’t buy.</h1>
-        <p class="lead">We take your podcasts, interviews and videos and turn them into a daily stream of short-form clips on TikTok, Instagram Reels and YouTube Shorts. Your brand shows up every day. You don’t have to film anything new.</p>
-        <div class="hero__cta">
-          <a href="#contact" class="btn">Get 3 free clips</a>
-          <a href="#process" class="link">See how it works →</a>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Short-form content agency</p>
+          <h1>Turn the content you already have into attention you can’t buy.</h1>
+          <p class="lead">We take your podcasts, interviews and videos and turn them into a daily stream of short-form clips on TikTok, Instagram Reels and YouTube Shorts. Your brand shows up every day. You don’t have to film anything new.</p>
+          <div class="hero__cta">
+            <a href="#contact" class="btn">Get 3 free clips</a>
+            <a href="#how" class="link">See how it works →</a>
+          </div>
+          <p class="hero__note">No commitment. We cut three clips from your existing content so you can see the quality before you decide.</p>
         </div>
-        <p class="hero__note">No commitment. We cut three clips from your existing content so you can see the quality before you decide.</p>
+
+        <!-- Animated phone feed -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="feed">
+              <div class="feed__track">
+                <div class="clip clip--1">
+                  <div class="clip__person"></div>
+                  <p class="clip__caption">Nobody tells you this about scaling a brand</p>
+                  <div class="clip__actions">
+                    <span><svg><use href="#i-heart" /></svg>24.1K</span>
+                    <span><svg><use href="#i-comment" /></svg>812</span>
+                    <span><svg><use href="#i-share" /></svg>3.4K</span>
+                  </div>
+                  <div class="clip__meta"><strong>@yourbrand</strong><span>Founder story, part 1</span></div>
+                  <div class="clip__progress"><span></span></div>
+                </div>
+                <div class="clip clip--2">
+                  <div class="clip__person"></div>
+                  <p class="clip__caption">The one mistake that kills most launches</p>
+                  <div class="clip__actions">
+                    <span><svg><use href="#i-heart" /></svg>61.8K</span>
+                    <span><svg><use href="#i-comment" /></svg>2.1K</span>
+                    <span><svg><use href="#i-share" /></svg>9.7K</span>
+                  </div>
+                  <div class="clip__meta"><strong>@yourbrand</strong><span>From our latest podcast</span></div>
+                  <div class="clip__progress"><span></span></div>
+                </div>
+                <div class="clip clip--3">
+                  <div class="clip__person"></div>
+                  <p class="clip__caption">We almost quit. Then this happened</p>
+                  <div class="clip__actions">
+                    <span><svg><use href="#i-heart" /></svg>18.4K</span>
+                    <span><svg><use href="#i-comment" /></svg>640</span>
+                    <span><svg><use href="#i-share" /></svg>1.9K</span>
+                  </div>
+                  <div class="clip__meta"><strong>@yourbrand</strong><span>Interview highlight</span></div>
+                  <div class="clip__progress"><span></span></div>
+                </div>
+                <div class="clip clip--4">
+                  <div class="clip__person"></div>
+                  <p class="clip__caption">Stop posting once a week. Do this instead</p>
+                  <div class="clip__actions">
+                    <span><svg><use href="#i-heart" /></svg>44.2K</span>
+                    <span><svg><use href="#i-comment" /></svg>1.3K</span>
+                    <span><svg><use href="#i-share" /></svg>6.2K</span>
+                  </div>
+                  <div class="clip__meta"><strong>@yourbrand</strong><span>Webinar clip</span></div>
+                  <div class="clip__progress"><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float float--views">
+            <span>Views this week</span>
+            <strong id="views-ticker">184,320</strong>
+            <em>↑ 38%</em>
+          </div>
+          <div class="float float--notif" id="notif">
+            <span class="notif__dot"></span>
+            <div><strong id="notif-title">New follower</strong><span id="notif-sub">just now</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -46,8 +118,93 @@
       <div class="container bar__inner">
         <div><strong>Daily</strong><span>Publishing, every platform</span></div>
         <div><strong>Zero</strong><span>Extra filming for your team</span></div>
-        <div><strong>72h</strong><span>From footage to first clips</span></div>
-        <div><strong>100%</strong><span>Done for you, end to end</span></div>
+        <div><strong><span class="count" data-to="72">72</span>h</strong><span>From footage to first clips</span></div>
+        <div><strong><span class="count" data-to="100">100</span>%</strong><span>Done for you, end to end</span></div>
+      </div>
+    </section>
+
+    <!-- ANIMATED EXPLAINER -->
+    <section class="section section--muted" id="how">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <p class="eyebrow">How it works</p>
+          <h2>One video from you. A month of attention for your brand.</h2>
+          <p class="section__lead">You talk about what you know best. We turn it into dozens of clips and make sure your audience sees you every day. You keep running your business while your brand grows on autopilot.</p>
+        </div>
+
+        <div class="flow" id="flow">
+          <div class="flow__col">
+            <p class="flow__label"><span>01</span> You record once</p>
+            <div class="flow__card">
+              <div class="video">
+                <div class="video__screen">
+                  <div class="video__people"><span></span><span></span></div>
+                  <span class="video__play"></span>
+                  <span class="video__time">58:24</span>
+                </div>
+                <div class="timeline">
+                  <span class="seg" style="left:6%;width:8%;--i:0"></span>
+                  <span class="seg" style="left:22%;width:6%;--i:1"></span>
+                  <span class="seg" style="left:37%;width:9%;--i:2"></span>
+                  <span class="seg" style="left:55%;width:6%;--i:3"></span>
+                  <span class="seg" style="left:70%;width:8%;--i:4"></span>
+                  <span class="seg" style="left:86%;width:7%;--i:5"></span>
+                  <span class="timeline__head"></span>
+                </div>
+              </div>
+            </div>
+            <p class="flow__text">A podcast, interview, webinar or stream. Anything you already have.</p>
+          </div>
+
+          <div class="flow__arrow" aria-hidden="true"><span></span></div>
+
+          <div class="flow__col">
+            <p class="flow__label"><span>02</span> We find the moments</p>
+            <div class="flow__card">
+              <div class="minis">
+                <div class="mini" style="--i:0"><em>“Nobody tells you this…”</em></div>
+                <div class="mini" style="--i:1"><em>“The #1 mistake”</em></div>
+                <div class="mini" style="--i:2"><em>“We almost quit”</em></div>
+                <div class="mini" style="--i:3"><em>“Do this instead”</em></div>
+                <div class="mini" style="--i:4"><em>“Hot take:”</em></div>
+                <div class="mini" style="--i:5"><em>“Here’s the truth”</em></div>
+              </div>
+            </div>
+            <p class="flow__text">Our editors cut the strongest moments into scroll-stopping clips with hooks and captions.</p>
+          </div>
+
+          <div class="flow__arrow" aria-hidden="true"><span></span></div>
+
+          <div class="flow__col">
+            <p class="flow__label"><span>03</span> You show up everywhere</p>
+            <div class="flow__card">
+              <div class="platforms">
+                <div class="platform" style="--i:0;--w:92%">
+                  <div class="platform__row"><strong>TikTok</strong><span class="platform__num" data-to="412000">0</span></div>
+                  <div class="platform__bar"><span></span></div>
+                </div>
+                <div class="platform" style="--i:1;--w:74%">
+                  <div class="platform__row"><strong>Instagram Reels</strong><span class="platform__num" data-to="268000">0</span></div>
+                  <div class="platform__bar"><span></span></div>
+                </div>
+                <div class="platform" style="--i:2;--w:58%">
+                  <div class="platform__row"><strong>YouTube Shorts</strong><span class="platform__num" data-to="195000">0</span></div>
+                  <div class="platform__bar"><span></span></div>
+                </div>
+                <p class="platforms__note">Illustrative example</p>
+              </div>
+            </div>
+            <p class="flow__text">Clips go live daily on your accounts and our clip pages. New people discover you every day.</p>
+          </div>
+        </div>
+
+        <div class="outcome">
+          <div><strong>1</strong><span>video from you</span></div>
+          <div class="outcome__op">→</div>
+          <div><strong>30+</strong><span>clips from us</span></div>
+          <div class="outcome__op">→</div>
+          <div><strong>30</strong><span>days of daily presence</span></div>
+        </div>
       </div>
     </section>
 
