@@ -17,16 +17,8 @@ document.querySelectorAll(".nav__links a").forEach((a) =>
   })
 );
 
-// Pricing buttons preselect the plan in the form
-const planSelect = document.querySelector('select[name="plan"]');
-document.querySelectorAll("[data-plan]").forEach((btn) =>
-  btn.addEventListener("click", () => {
-    planSelect.value = btn.dataset.plan;
-  })
-);
-
-// Reveal on scroll
-const revealEls = document.querySelectorAll(".card, .step, .plan, .checklist li, .faq details, .section h2");
+// Subtle reveal on scroll
+const revealEls = document.querySelectorAll(".section__head, .card, .steps li, .list li, .faq details, .table-wrap");
 revealEls.forEach((el) => el.classList.add("reveal"));
 if ("IntersectionObserver" in window) {
   const io = new IntersectionObserver(
@@ -37,7 +29,7 @@ if ("IntersectionObserver" in window) {
           io.unobserve(e.target);
         }
       }),
-    { threshold: 0.12 }
+    { threshold: 0.1 }
   );
   revealEls.forEach((el) => io.observe(el));
 } else {
@@ -45,18 +37,18 @@ if ("IntersectionObserver" in window) {
 }
 
 // Contact form → opens the visitor's email client with the details prefilled.
-// Swap this for Formspree, Tally, Calendly, etc. when you have a backend.
+// Swap for Formspree, Tally or Calendly when ready.
 document.getElementById("contact-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const data = new FormData(e.target);
   const body = [
     `Name: ${data.get("name")}`,
     `Email: ${data.get("email")}`,
-    `Brand: ${data.get("brand") || "-"}`,
-    `Plan: ${data.get("plan")}`,
+    `Company: ${data.get("brand") || "-"}`,
     `Content: ${data.get("link") || "-"}`,
+    `Goal: ${data.get("goal") || "-"}`,
   ].join("\n");
-  const subject = `Clipping plan request — ${data.get("brand") || data.get("name")}`;
+  const subject = `Free clips request — ${data.get("brand") || data.get("name")}`;
   window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  e.target.querySelector(".form__note").textContent = "Thanks! Your email app should open now — just hit send.";
+  e.target.querySelector(".form__note").textContent = "Thanks! Your email app should open now. Just hit send.";
 });
